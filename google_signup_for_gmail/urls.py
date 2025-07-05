@@ -1,8 +1,8 @@
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from gmail_reader import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('accounts/', include('allauth.urls')),
-    path('emails/', include('gmail_reader.urls')),
+    path('', views.home, name='home'),
+    path('oauth2callback/', views.oauth2callback, name='oauth2callback'),
+    path('emails/', views.emails, name='emails'),
 ] 
