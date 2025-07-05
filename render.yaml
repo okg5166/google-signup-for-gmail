@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: google-signup-for-gmail
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn google_signup_for_gmail.wsgi"
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        sync: false
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: ALLOWED_HOSTS
+        value: "*" 

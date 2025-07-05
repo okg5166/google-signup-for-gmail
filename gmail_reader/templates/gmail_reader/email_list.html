@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Top Gmail Emails</title>
+</head>
+<body>
+    <h1>Your Top Gmail Emails</h1>
+    <ul>
+        {% for email in emails %}
+            <li>
+                <strong>From:</strong> {{ email.from }}<br>
+                <strong>Subject:</strong> {{ email.subject }}<br>
+                <strong>Snippet:</strong> {{ email.snippet }}<br>
+                <hr>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/accounts/logout/">Logout</a>
+</body>
+</html> 
