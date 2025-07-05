@@ -49,4 +49,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Google OAuth2 credentials
 GOOGLE_CLIENT_ID = os.environ.get('GOOGLE_CLIENT_ID', '59361856976-gaf4djboph4lokikh40uq7350pan7c3k.apps.googleusercontent.com')
 GOOGLE_CLIENT_SECRET = os.environ.get('GOOGLE_CLIENT_SECRET', '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')
-GOOGLE_REDIRECT_URI = os.environ.get('GOOGLE_REDIRECT_URI', 'http://localhost:8000/oauth2callback/') 
+GOOGLE_REDIRECT_URI = os.environ.get('GOOGLE_REDIRECT_URI', 'https://google-signup-for-gmail.onrender.com') 
